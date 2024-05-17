@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<body>
+    <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+        <p>First Name:</p>
+        <p>{{application.firstname}}</p>
+    </div>
+
+    <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+        <p>Last Name:</p>
+        <p>{{application.lastname}}</p>
+    </div>
+
+    <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+        <p>Address:</p>
+        <p>{{application.address}}</p>
+    </div>
+
+    <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+        <p>Phone#:</p>
+        <p>{{application.phonenumber}}</p>
+    </div>
+
+    <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+        <p>Valid ID:</p>
+        <img src={{application.validid}} alt="">
+    </div>
+
+    <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+        <p>Signature:</p>
+        <img src={{application.signature}} alt="">
+    </div>
+
+    {{#if application.comakerfirstname}}
+        <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+            <p>Co Maker Name:</p>
+            <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+                <p>{{application.comakerfirstname}}</p>
+                <p>{{application.comakerlastname}}</p>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+            <p>Co Maker Address:</p>
+            <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+                <p>{{application.address}}</p>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+            <p>Co Maker Phone#:</p>
+            <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+                <p>{{application.phonenumber}}</p>
+            </div>
+        </div>
+
+
+        <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+            <p>Co Maker Valid ID:</p>
+            <img src={{application.comakervalidid}} alt="">
+        </div>
+
+        <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+            <p>Co Maker Signature:</p>
+            <img src={{application.comakersignature}} alt="">
+        </div>
+    {{/if}}
+
+
+    {{#if application.bankcertificate}}
+        <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+            <p>Bank Loan Certificate:</p>
+            <img src={{application.bankcertificate}} alt="">
+        </div>
+    {{/if}}
+
+
+    {{#if application.loancertificate}}
+        <div style="display: flex; flex-direction: row; row-gap: 1rem;">
+            <p>Loan Certificate:</p>
+            <img src={{application.loancertificate}} alt="">
+        </div>
+    {{/if}}
+</body>
+
+</html>
