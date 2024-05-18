@@ -8,7 +8,7 @@ import { useLogout } from "../../../utils/functions.js"
 function SideNav({ activeNav, setActiveNav }) {
     const { userData } = useContext(AppContext);
     return (
-        <div className='basis-[20%] bg-[#4f41bc] w-full h-full flex flex-col justify-between p-5'>
+        <div className='basis-[30%] bg-[#4f41bc] w-full h-full flex flex-col justify-between p-5'>
             <div className='h-[90%] flex flex-col gap-6'>
                 <div className='flex flex-col items-center gap-4'>
                     {userData.profileimage ? (

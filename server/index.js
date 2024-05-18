@@ -8,7 +8,7 @@ const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://road-ready-frontend.vercel.app'],
+    origin: ['http://localhost:3000', 'https://roadready-frontend.vercel.app'],
     credentials: true,
     exposedHeaders: ["Authorization"]
 }));

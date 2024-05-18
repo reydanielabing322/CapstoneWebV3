@@ -391,7 +391,7 @@ const authGoogleCallBack = asyncHandler(async (req, res) => {
     res.redirect(
         process.env.node_env == "dev"
             ? `http://localhost:3000/dashboard?api_access_token=${token}&access_token=${data.session.access_token}`
-            : `https://road-ready-frontend.vercel.app/dashboard?api_access_token=${token}&access_token=${data.session.access_token}`
+            : `https://roadready-frontend.vercel.app/dashboard?api_access_token=${token}&access_token=${data.session.access_token}`
     )
     return
 })

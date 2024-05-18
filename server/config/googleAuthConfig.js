@@ -6,7 +6,7 @@ const oAuth2Client = new google.auth.OAuth2({
     redirectUri: [
         process.env.node_env == "dev"
             ? "http://localhost:6969/auth/google/callback"
-            : "https://road-ready-backend.vercel.app/auth/google/callback",
+            : "https://road-ready-databackend.vercel.app/auth/google/callback",
     ],
 })
 
