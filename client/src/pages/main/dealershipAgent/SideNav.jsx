@@ -8,7 +8,7 @@ import { useLogout } from "../../../utils/functions.js"
 function SideNav({ activeNav, setActiveNav }) {
     const { userData } = useContext(AppContext);
     return (
-        <div className='basis-[20%] bg-[#4f41bc] w-full h-full flex flex-col justify-between p-5'>
+        <div className='basis-[30%] bg-[#4f41bc] w-full h-full flex flex-col justify-between p-5'>
             <div className='h-[90%] flex flex-col gap-6'>
                 <div className='flex flex-col items-center gap-4'>
                     {userData.profileimage ? (
@@ -45,7 +45,9 @@ function SideNav({ activeNav, setActiveNav }) {
                                 <path fillRule="evenodd" clipRule="evenodd" d="M15.8327 15.2822H4.16645C3.70705 15.2822 3.33203 15.5635 3.33203 15.908C3.33203 16.2525 3.70705 16.5337 4.16645 16.5337H15.8327C16.2973 16.5337 16.6671 16.2525 16.6671 15.908C16.6671 15.5635 16.2973 15.2822 15.8327 15.2822Z" fill="#5041BC" />
                             </svg>
                         </div>
-                        <p>Applicants</p>
+                        <div>
+                        <p>Application Management</p>
+                        </div>
                     </button>
 
                     <button onClick={() => setActiveNav("notifications")} className={`flex flex-row gap-2 justify-start p-3 rounded-lg ${activeNav === "notifications" && 'bg-white'} transition-all`}>

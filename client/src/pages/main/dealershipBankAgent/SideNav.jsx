@@ -45,7 +45,9 @@ function SideNav({ activeNav, setActiveNav }) {
                                 <path fillRule="evenodd" clipRule="evenodd" d="M15.8327 15.2822H4.16645C3.70705 15.2822 3.33203 15.5635 3.33203 15.908C3.33203 16.2525 3.70705 16.5337 4.16645 16.5337H15.8327C16.2973 16.5337 16.6671 16.2525 16.6671 15.908C16.6671 15.5635 16.2973 15.2822 15.8327 15.2822Z" fill="#5041BC" />
                             </svg>
                         </div>
-                        <p>Applicants</p>
+                        <div>
+                        <p>Application Management</p>
+                        </div>
                     </button>
 
                     <button onClick={() => setActiveNav("notifications")} className={`flex flex-row gap-2 justify-start p-3 rounded-lg ${activeNav === "notifications" && 'bg-white'} transition-all`}>

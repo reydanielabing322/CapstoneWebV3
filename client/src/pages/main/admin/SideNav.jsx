@@ -47,19 +47,7 @@ function SideNav({ activeNav, setActiveNav }) {
                         <p>Manage Accounts</p>
                     </button>
 
-                    <button onClick={() => setActiveNav("documentsReceived")} className={`flex flex-row gap-2 justify-start p-3 rounded-lg ${activeNav === "documentsReceived" && 'bg-white'} transition-all`}>
-                        <div className='w-[15%]'>
-                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fillRule="evenodd" clipRule="evenodd" d="M17.7093 3.99023H15.6258C15.2841 3.99023 15.0039 3.7426 15.0039 3.44418V2.03726C15.0039 1.04515 13.9736 0.239746 12.708 0.239746H2.29074C1.03026 0.239746 0 1.04515 0 2.03726V18.4422C0 19.4304 1.03026 20.2397 2.29074 20.2397H17.7093C18.9749 20.2397 20 19.4304 20 18.4422V5.78775C20 4.79564 18.9749 3.99023 17.7093 3.99023Z" fill={`${activeNav == "documentsReceived" ? "#4f41bc" : "white"}`} />
-                                <path fillRule="evenodd" clipRule="evenodd" d="M18.3355 18.4422C18.3355 18.7438 18.0542 18.9883 17.7084 18.9883H2.28988C1.94819 18.9883 1.66797 18.7438 1.66797 18.4422V2.03726C1.66797 1.73494 1.94819 1.49121 2.28988 1.49121H12.7071C13.0529 1.49121 13.3342 1.73494 13.3342 2.03726V3.44418C13.3342 4.43239 14.3593 5.23779 15.6249 5.23779H17.7084C18.0542 5.23779 18.3355 5.48543 18.3355 5.78775V18.4422Z" fill="white" />
-                                <path fillRule="evenodd" clipRule="evenodd" d="M4.16645 6.48926H10.8366C11.296 6.48926 11.6658 6.20881 11.6658 5.86353C11.6658 5.51902 11.296 5.23779 10.8366 5.23779H4.16645C3.70705 5.23779 3.33203 5.51902 3.33203 5.86353C3.33203 6.20881 3.70705 6.48926 4.16645 6.48926Z" fill="#5041BC" />
-                                <path fillRule="evenodd" clipRule="evenodd" d="M15.8327 8.57227H4.16645C3.70705 8.57227 3.33203 8.84959 3.33203 9.198C3.33203 9.5425 3.70705 9.81982 4.16645 9.81982H15.8327C16.2973 9.81982 16.6671 9.5425 16.6671 9.198C16.6671 8.84959 16.2973 8.57227 15.8327 8.57227Z" fill="#5041BC" />
-                                <path fillRule="evenodd" clipRule="evenodd" d="M15.8327 11.9031H4.16645C3.70705 11.9031 3.33203 12.1835 3.33203 12.5288C3.33203 12.8733 3.70705 13.1545 4.16645 13.1545H15.8327C16.2973 13.1545 16.6671 12.8733 16.6671 12.5288C16.6671 12.1835 16.2973 11.9031 15.8327 11.9031Z" fill="#5041BC" />
-                                <path fillRule="evenodd" clipRule="evenodd" d="M15.8327 15.2378H4.16645C3.70705 15.2378 3.33203 15.519 3.33203 15.8635C3.33203 16.208 3.70705 16.4893 4.16645 16.4893H15.8327C16.2973 16.4893 16.6671 16.208 16.6671 15.8635C16.6671 15.519 16.2973 15.2378 15.8327 15.2378Z" fill="#5041BC" />
-                            </svg>
-                        </div>
-                        <p>Documents Received</p>
-                    </button>
+                    
 
                     <button onClick={() => setActiveNav("notifications")} className={`flex flex-row gap-2 justify-start p-3 rounded-lg ${activeNav === "notifications" && 'bg-white'} transition-all`}>
                         <div className='w-[15%]'>

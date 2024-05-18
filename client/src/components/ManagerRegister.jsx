@@ -101,7 +101,7 @@ function ManagerRegister({ noUserDataRegisterType, setNoUserDataRegisterType }) 
             <input type="text" name="establishmentAddress" placeholder='Establishment Address' className='px-2 py-1 border border-black rounded' required />
 
 
-            <label htmlFor="">Temporary (need MAPS API key(paid), input valid lat and long as it will be used to calculate distance from buyer to dealership est.)</label>
+            
             <input type="text" name="latitude" placeholder='Latitude' className='px-2 py-1 border border-black rounded' required />
 
             <input type="text" name="longitude" placeholder='Longitude' className='px-2 py-1 border border-black rounded' required />
@@ -141,7 +141,7 @@ function ManagerRegister({ noUserDataRegisterType, setNoUserDataRegisterType }) 
 
             {userData.role == 'admin' ? (
                 <>
-                    <button type="submit" className='border rounded px-3 py-2 bg-blue-300 w-100'>Register New Agent</button>
+                    <button type="submit" className='border rounded px-3 py-2 bg-blue-300 w-100'>Register Dealership Manager</button>
                     <Link to="/dashboard">Go Back</Link>
                 </>
             ) : (

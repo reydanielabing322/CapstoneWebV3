@@ -157,17 +157,30 @@ function ManageAccounts({ users, setUsers, dealerships, agents }) {
                                                 <td className={`${address == "NULL" && 'text-red-600'} border-r border-black p-2`}>{address}</td>
                                                 <td className={`border-r border-black p-2 ${user.isapproved == true && "text-green-600"}`}>{user.isapproved == true ? "Approved" : "Pending"}</td>
                                                 <td className='p-2'>
-                                                    {user.isapproved == true ? (
+                                                    {user.isapproved == true ? (                                           
+                                           // For Pending status
                                                         <div className='flex flex-row gap-2 items-center justify-center text-xl'>
-                                                            <IoPencilOutline className='text-green-600 cursor-pointer' onClick={() => updateUserStatus(user, false)} />
-                                                            <FaRegTrashCan onClick={() => { openModal(confirmDeleteAccount); setAccountDeletion(user) }} className='text-red-600 cursor-pointer' />
+                                                            <div>
+                                                                <IoPencilOutline className='text-green-600 cursor-pointer' onClick={() => updateUserStatus(user, false)} style={{ fontSize: "1.5em" }} />
+                                                                <p className="text-center text-xs">Disable</p>
+                                                            </div>
+                                                            <div>
+                                                                <FaRegTrashCan onClick={() => { openModal(confirmDeleteAccount); setAccountDeletion(user) }} className='text-red-600 cursor-pointer' style={{ fontSize: "1.5em" }} />
+                                                                <p className="text-center text-xs">Delete</p>
+                                                            </div>
                                                         </div>
                                                     ) : (
-                                                        <div className='flex flex-row gap-2 items-center justify-center text-lg'>
-                                                            <IoIosCheckmarkCircle className='text-green-600 cursor-pointer' onClick={() => updateUserStatus(user, true)} />
-
-                                                            <FaRegTrashCan onClick={() => { openModal(confirmDeleteAccount); setAccountDeletion(user) }} className='text-red-600 cursor-pointer' />
-                                                        </div>
+                                                        // For Approved status
+                                                            <div className='flex flex-row gap-2 items-center justify-center text-lg'>
+                                                                <div>
+                                                                    <IoIosCheckmarkCircle className='text-green-600 cursor-pointer' onClick={() => updateUserStatus(user, true)} style={{ fontSize: "1.5em" }} />
+                                                                    <p className="text-center text-xs">Approve</p>
+                                                                </div>
+                                                                <div>
+                                                                    <FaRegTrashCan onClick={() => { openModal(confirmDeleteAccount); setAccountDeletion(user) }} className='text-red-600 cursor-pointer' style={{ fontSize: "1.5em" }} />
+                                                                    <p className="text-center text-xs">Delete</p>
+                                                                </div>
+                                                            </div>
                                                     )}
                                                 </td>
                                             </tr>
@@ -213,15 +226,32 @@ function ManageAccounts({ users, setUsers, dealerships, agents }) {
                                                 <td className={`border-r border-black p-2 ${user.isapproved == true && "text-green-600"}`}>{user.isapproved == true ? "Approved" : "Pending"}</td>
                                                 <td className='p-2'>
                                                     {user.isapproved == true ? (
-                                                        <div className='flex flex-row gap-2 items-center justify-center text-xl'>
-                                                            <IoPencilOutline className='text-green-600 cursor-pointer' onClick={() => updateUserStatus(user, false)} />
-                                                            <FaRegTrashCan onClick={() => { openModal(confirmDeleteAccount); setAccountDeletion(user) }} className='text-red-600 cursor-pointer' />
-                                                        </div>
+                                                         // For Pending status
+                                                         <div className='flex flex-row gap-2 items-center justify-center text-xl'>
+                                                         <div>
+                                                             <IoPencilOutline className='text-green-600 cursor-pointer' onClick={() => updateUserStatus(user, false)} style={{ fontSize: "1.5em" }} />
+                                                             <p className="text-center text-xs">Disable</p>
+                                                         </div>
+                                                         <div>
+                                                             <FaRegTrashCan onClick={() => { openModal(confirmDeleteAccount); setAccountDeletion(user) }} className='text-red-600 cursor-pointer' style={{ fontSize: "1.5em" }} />
+                                                             <p className="text-center text-xs">Delete</p>
+                                                         </div>
+                                                     </div>
+
                                                     ) : (
+                                                        // For Approved status
                                                         <div className='flex flex-row gap-2 items-center justify-center text-lg'>
-                                                            <IoIosCheckmarkCircle className='text-green-600 cursor-pointer' onClick={() => updateUserStatus(user, true)} />
-                                                            <FaRegTrashCan onClick={() => { openModal(confirmDeleteAccount); setAccountDeletion(user) }} className='text-red-600 cursor-pointer' />
+                                                        <div>
+                                                            <IoIosCheckmarkCircle className='text-green-600 cursor-pointer' onClick={() => updateUserStatus(user, true)} style={{ fontSize: "1.5em" }} />
+                                                            <p className="text-center text-xs">Approve</p>
                                                         </div>
+                                                        <div>
+                                                            <FaRegTrashCan onClick={() => { openModal(confirmDeleteAccount); setAccountDeletion(user) }} className='text-red-600 cursor-pointer' style={{ fontSize: "1.5em" }} />
+                                                            <p className="text-center text-xs">Delete</p>
+                                                        </div>
+                                                    </div>
+
+
                                                     )}
                                                 </td>
                                             </tr>
