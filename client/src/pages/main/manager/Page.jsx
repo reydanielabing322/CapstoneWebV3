@@ -36,7 +36,7 @@ function Page() {
             <div className='flex flex-row h-[100vh] bg-[#4f41bc]'>
                 {!userData.isapproved && (
                     <div className='fixed h-6 w-full bg-red-600 text-white flex justify-center'>
-                        <p>You are not authorized by the Admin.</p>
+                        <p>You are not authorized by the Admin. Please contact roadready4142@gmail.com</p>
                     </div>
                 )}
                 <SideNav activeNav={activeNav} setActiveNav={setActiveNav} />
